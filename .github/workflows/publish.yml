@@ -23,6 +23,6 @@ jobs:
 
     - name: Build the hello-world Docker image
       run: |
-        docker build -t ghcr.io/kaizenc/scalable-io:latest -f conf/Dockerfile
+        docker build -t ghcr.io/kaizenc/scalable-io:latest -f conf/server/Dockerfile .
         docker run ghcr.io/kaizenc/scalable-io:latest
         docker push ghcr.io/kaizenc/scalable-io:latest

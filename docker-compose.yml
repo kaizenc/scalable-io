@@ -1,0 +1,15 @@
+services:
+    server:
+        image: ghcr.io/kaizenc/scalable-io:latest
+        networks:
+            - default
+        command: ['python', 'server/main.py']
+        ports:
+            - 8080:8080
+    client:
+        image: ghcr.io/kaizenc/scalable-io-client:latest
+        command: npm run start
+        networks:
+            - default
+        ports:
+            - 3000:3000

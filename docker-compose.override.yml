@@ -1,0 +1,7 @@
+services:
+    server:
+        volumes:
+            - ./server:/opt/main/server
+    client:
+        volumes:
+            - ./client/src:/opt/main/client/src
